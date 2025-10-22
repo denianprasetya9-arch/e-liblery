@@ -155,7 +155,7 @@
             <div id="admin-panel" class="hidden space-y-8">
                 <div class="bg-white shadow-lg rounded-xl p-6">
                     <h2 class="text-xl font-bold mb-4 text-gray-700">Panel Admin: Tambah Buku</h2>
-                    <form id="add-book-form" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+                    <form id="add-book-form" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
                          <div class="lg:col-span-1">
                              <label for="new-book-title" class="block text-sm font-medium text-gray-700">Judul Buku</label>
                              <input type="text" id="new-book-title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
@@ -168,10 +168,6 @@
                              <label for="new-book-cover-url" class="block text-sm font-medium text-gray-700">URL Cover</label>
                              <input type="url" id="new-book-cover-url" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="https://...">
                          </div>
-                        <div class="lg:col-span-1">
-                            <label for="new-book-cover-file" class="block text-sm font-medium text-gray-700">atau Unggah Cover</label>
-                            <input type="file" id="new-book-cover-file" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100" accept="image/*">
-                        </div>
                         <div class="lg:col-span-1">
                             <button id="add-book-btn" type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Tambah Buku</button>
                         </div>
@@ -221,10 +217,6 @@
                 <div class="mb-4">
                     <label for="edit-book-cover-url" class="block text-sm font-medium text-gray-700">URL Cover Baru</label>
                     <input type="url" id="edit-book-cover-url" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Kosongkan jika tidak ganti">
-                </div>
-                <div class="mb-4">
-                    <label for="edit-book-cover-file" class="block text-sm font-medium text-gray-700">atau Unggah Cover Baru</label>
-                    <input type="file" id="edit-book-cover-file" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100" accept="image/*">
                 </div>
                  <div class="mb-6">
                     <label for="edit-book-content" class="block text-sm font-medium text-gray-700">Isi Konten Buku</label>
@@ -324,7 +316,6 @@
         const editBookTitleInput = document.getElementById('edit-book-title');
         const editBookAuthorInput = document.getElementById('edit-book-author');
         const editBookCoverUrlInput = document.getElementById('edit-book-cover-url');
-        const editBookCoverFileInput = document.getElementById('edit-book-cover-file');
         const editBookContentInput = document.getElementById('edit-book-content');
         // Read Modal
         const readBookModal = document.getElementById('read-book-modal');
@@ -494,15 +485,6 @@
             backgroundContainer.className = `theme-${theme}`;
         };
         
-        const fileToDataUrl = (file) => {
-            return new Promise((resolve, reject) => {
-                const reader = new FileReader();
-                reader.onload = () => resolve(reader.result);
-                reader.onerror = reject;
-                reader.readAsDataURL(file);
-            });
-        };
-
         const renderBooks = () => {
             bookList.innerHTML = '';
             localBooks.sort((a,b) => a.title.localeCompare(b.title)).forEach(book => {
@@ -667,18 +649,9 @@
                     const title = document.getElementById('new-book-title').value;
                     const author = document.getElementById('new-book-author').value;
                     let cover = document.getElementById('new-book-cover-url').value;
-                    const coverFile = document.getElementById('new-book-cover-file').files[0];
                     
-                    if (coverFile) {
-                        // PERBAIKAN: Cek ukuran file. Dokumen Firestore punya batas 1MB.
-                        // Menyimpan file base64 yang besar akan menyebabkan error.
-                        const maxSize = 500 * 1024; // 500KB (aman)
-                        if (coverFile.size > maxSize) {
-                            showNotification('Gagal', 'Ukuran file gambar terlalu besar. Maksimum 500KB.', true);
-                            return; // Hentikan eksekusi
-                        }
-                        cover = await fileToDataUrl(coverFile);
-                    } else if (!cover) {
+                    // PERBAIKAN: Logika disederhanakan. Hanya pakai URL.
+                    if (!cover) {
                         cover = `https://placehold.co/400x600/cccccc/ffffff?text=${title.replace(/\s/g, '+')}`;
                     }
 
@@ -810,19 +783,11 @@
                     const author = editBookAuthorInput.value;
                     const content = editBookContentInput.value;
                     let coverUrl = editBookCoverUrlInput.value;
-                    const coverFile = editBookCoverFileInput.files[0];
                     
                     const updates = { title, author, content };
 
-                    if (coverFile) {
-                        // PERBAIKAN: Cek ukuran file di modal edit juga.
-                        const maxSize = 500 * 1024; // 500KB (aman)
-                        if (coverFile.size > maxSize) {
-                            showNotification('Gagal', 'Ukuran file gambar terlalu besar. Maksimum 500KB.', true);
-                            return; // Hentikan eksekusi
-                        }
-                        updates.cover = await fileToDataUrl(coverFile);
-                    } else if (coverUrl) {
+                    // PERBAIKAN: Logika disederhanakan. Hanya pakai URL.
+                    if (coverUrl) {
                         updates.cover = coverUrl;
                     }
 
@@ -853,5 +818,3 @@
     </script>
 </body>
 </html>
-
-
