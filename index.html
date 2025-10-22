@@ -279,7 +279,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, doc, onSnapshot, addDoc, setDoc, deleteDoc, updateDoc, getDoc, writeBatch } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getFirestore, collection, doc, onSnapshot, addDoc, setDoc, deleteDoc, updateDoc, getDoc, writeBatch, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
         
         // --- KONFIGURASI & VARIABEL GLOBAL ---
         const MAIN_ADMIN = 'denian';
@@ -355,9 +355,13 @@
         // --- INISIALISASI ---
         const initializeAppWithFirebase = async () => {
             try {
-                const appId = typeof __app_id !== 'undefined' ? __app_id : 'elibrary-dev';
+                const appId = typeof __app_id !== 'undefined' ? __app_id : null;
                 const firebaseConfigStr = typeof __firebase_config !== 'undefined' ? __firebase_config : '{}';
                 
+                // PERBAIKAN: Memeriksa apakah __app_id ada. Ini penting untuk keamanan.
+                if (!appId) {
+                    throw new Error("Variabel __app_id tidak ditemukan. Pastikan aplikasi berjalan di lingkungan yang benar.");
+                }
                 if (!firebaseConfigStr || firebaseConfigStr === '{}') {
                     throw new Error("Konfigurasi Firebase tidak ditemukan.");
                 }
@@ -365,6 +369,8 @@
 
                 const firebaseApp = initializeApp(firebaseConfig);
                 db = getFirestore(firebaseApp);
+                // PERBAIKAN: Menambahkan log level debug untuk melihat info error Firebase di console
+                setLogLevel('Debug');
                 const auth = getAuth(firebaseApp);
 
                 const authToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
@@ -664,6 +670,13 @@
                     const coverFile = document.getElementById('new-book-cover-file').files[0];
                     
                     if (coverFile) {
+                        // PERBAIKAN: Cek ukuran file. Dokumen Firestore punya batas 1MB.
+                        // Menyimpan file base64 yang besar akan menyebabkan error.
+                        const maxSize = 500 * 1024; // 500KB (aman)
+                        if (coverFile.size > maxSize) {
+                            showNotification('Gagal', 'Ukuran file gambar terlalu besar. Maksimum 500KB.', true);
+                            return; // Hentikan eksekusi
+                        }
                         cover = await fileToDataUrl(coverFile);
                     } else if (!cover) {
                         cover = `https://placehold.co/400x600/cccccc/ffffff?text=${title.replace(/\s/g, '+')}`;
@@ -802,6 +815,12 @@
                     const updates = { title, author, content };
 
                     if (coverFile) {
+                        // PERBAIKAN: Cek ukuran file di modal edit juga.
+                        const maxSize = 500 * 1024; // 500KB (aman)
+                        if (coverFile.size > maxSize) {
+                            showNotification('Gagal', 'Ukuran file gambar terlalu besar. Maksimum 500KB.', true);
+                            return; // Hentikan eksekusi
+                        }
                         updates.cover = await fileToDataUrl(coverFile);
                     } else if (coverUrl) {
                         updates.cover = coverUrl;
@@ -834,4 +853,5 @@
     </script>
 </body>
 </html>
+
 
