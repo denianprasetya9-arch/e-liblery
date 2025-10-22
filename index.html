@@ -82,7 +82,7 @@
     <div id="background-container"></div>
 
     <!-- Indikator Loading Awal -->
-    <div id="loading-overlay" class="fixed inset-0 bg-white/50 backdrop-blur-sm flex items-center justify-center z-[101]">
+    <div id="loading-overlay" class="fixed inset-0 bg-white/50 backdrop-blur-sm flex items-center justify-center z-[101] p-4">
         <div class="text-center">
             <svg class="animate-spin h-10 w-10 text-indigo-600 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
             <p class="mt-2 text-lg font-semibold text-gray-700">Menghubungkan ke server...</p>
@@ -96,49 +96,49 @@
             <div class="bg-white/70 form-container shadow-2xl rounded-2xl p-8">
                  <div class="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-indigo-100 mb-6">
                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                    </svg>
-               </div>
-                <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Selamat Datang</h1>
-                <p class="text-center text-gray-600 mb-6">Login ke akun E-Library Anda.</p>
-                <div id="login-error-message" class="hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-md mb-4" role="alert"></div>
-                <div id="login-success-message" class="hidden bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-md mb-4" role="alert"></div>
-                <form id="login-form">
-                    <div class="mb-4">
-                        <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
-                        <input type="text" id="username" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Masukkan username" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                        <input type="password" id="password" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="****" required>
-                    </div>
-                    <button id="login-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg w-full focus:outline-none focus:shadow-outline transition-transform transform hover:scale-105" type="submit">Login</button>
-                </form>
-                <div class="mt-6 text-center">
-                    <p class="text-sm text-gray-600">Belum punya akun? <a href="#" id="show-register-link" class="font-medium text-indigo-600 hover:text-indigo-500">Daftar di sini</a></p>
-                </div>
+              </div>
+                 <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Selamat Datang</h1>
+                 <p class="text-center text-gray-600 mb-6">Login ke akun E-Library Anda.</p>
+                 <div id="login-error-message" class="hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-md mb-4" role="alert"></div>
+                 <div id="login-success-message" class="hidden bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-md mb-4" role="alert"></div>
+                 <form id="login-form">
+                     <div class="mb-4">
+                         <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+                         <input type="text" id="username" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Masukkan username" required>
+                     </div>
+                     <div class="mb-6">
+                         <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                         <input type="password" id="password" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="****" required>
+                     </div>
+                     <button id="login-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg w-full focus:outline-none focus:shadow-outline transition-transform transform hover:scale-105" type="submit">Login</button>
+                 </form>
+                 <div class="mt-6 text-center">
+                     <p class="text-sm text-gray-600">Belum punya akun? <a href="#" id="show-register-link" class="font-medium text-indigo-600 hover:text-indigo-500">Daftar di sini</a></p>
+                 </div>
             </div>
         </div>
 
         <!-- 2. Halaman Registrasi -->
         <div id="register-page" class="page hidden w-full max-w-md">
-             <div class="bg-white/70 form-container shadow-2xl rounded-2xl p-8">
-                <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Buat Akun Baru</h1>
-                <p class="text-center text-gray-600 mb-6">Pendaftaran memerlukan persetujuan admin.</p>
-                <form id="register-form">
-                    <div class="mb-4">
-                        <label for="reg-username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
-                        <input type="text" id="reg-username" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
-                    </div>
-                    <div class="mb-6">
-                        <label for="reg-password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                        <input type="password" id="reg-password" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
-                    </div>
-                    <button id="register-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg w-full focus:outline-none focus:shadow-outline transition-transform transform hover:scale-105" type="submit">Daftar</button>
-                </form>
-                <div class="mt-6 text-center">
-                    <p class="text-sm text-gray-600">Sudah punya akun? <a href="#" id="show-login-link" class="font-medium text-indigo-600 hover:text-indigo-500">Login di sini</a></p>
-                </div>
+              <div class="bg-white/70 form-container shadow-2xl rounded-2xl p-8">
+                 <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Buat Akun Baru</h1>
+                 <p class="text-center text-gray-600 mb-6">Pendaftaran memerlukan persetujuan admin.</p>
+                 <form id="register-form">
+                     <div class="mb-4">
+                         <label for="reg-username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+                         <input type="text" id="reg-username" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                     </div>
+                     <div class="mb-6">
+                         <label for="reg-password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                         <input type="password" id="reg-password" class="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                     </div>
+                     <button id="register-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg w-full focus:outline-none focus:shadow-outline transition-transform transform hover:scale-105" type="submit">Daftar</button>
+                 </form>
+                 <div class="mt-6 text-center">
+                     <p class="text-sm text-gray-600">Sudah punya akun? <a href="#" id="show-login-link" class="font-medium text-indigo-600 hover:text-indigo-500">Login di sini</a></p>
+                 </div>
             </div>
         </div>
 
@@ -155,22 +155,26 @@
             <div id="admin-panel" class="hidden space-y-8">
                 <div class="bg-white shadow-lg rounded-xl p-6">
                     <h2 class="text-xl font-bold mb-4 text-gray-700">Panel Admin: Tambah Buku</h2>
-                    <form id="add-book-form" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+                    <form id="add-book-form" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+                          <div class="lg:col-span-1">
+                              <label for="new-book-title" class="block text-sm font-medium text-gray-700">Judul Buku</label>
+                              <input type="text" id="new-book-title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+                          </div>
                          <div class="lg:col-span-1">
-                             <label for="new-book-title" class="block text-sm font-medium text-gray-700">Judul Buku</label>
-                             <input type="text" id="new-book-title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
-                         </div>
-                        <div class="lg:col-span-1">
-                             <label for="new-book-author" class="block text-sm font-medium text-gray-700">Penulis</label>
-                             <input type="text" id="new-book-author" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
-                         </div>
+                              <label for="new-book-author" class="block text-sm font-medium text-gray-700">Penulis</label>
+                              <input type="text" id="new-book-author" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+                          </div>
+                          <div class="lg:col-span-1">
+                              <label for="new-book-cover-url" class="block text-sm font-medium text-gray-700">URL Cover</label>
+                              <input type="url" id="new-book-cover-url" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="https://...">
+                          </div>
                          <div class="lg:col-span-1">
-                             <label for="new-book-cover-url" class="block text-sm font-medium text-gray-700">URL Cover</label>
-                             <input type="url" id="new-book-cover-url" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="https://...">
-                         </div>
-                        <div class="lg:col-span-1">
-                            <button id="add-book-btn" type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Tambah Buku</button>
+                            <label for="new-book-cover-file" class="block text-sm font-medium text-gray-700">atau Unggah Cover</label>
+                            <input type="file" id="new-book-cover-file" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100" accept="image/*">
                         </div>
+                         <div class="lg:col-span-1">
+                             <button id="add-book-btn" type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">Tambah Buku</button>
+                         </div>
                     </form>
                 </div>
                 <!-- Panel lainnya -->
@@ -188,9 +192,9 @@
                     </div>
                 </div>
                  <div id="user-management-panel" class="bg-white shadow-lg rounded-xl p-6">
-                    <h2 class="text-xl font-bold mb-4 text-gray-700">Manajemen Pengguna</h2>
-                    <div id="user-list" class="space-y-3 max-h-60 overflow-y-auto"></div>
-                </div>
+                     <h2 class="text-xl font-bold mb-4 text-gray-700">Manajemen Pengguna</h2>
+                     <div id="user-list" class="space-y-3 max-h-60 overflow-y-auto"></div>
+                 </div>
             </div>
 
             <main class="mt-8">
@@ -218,6 +222,10 @@
                     <label for="edit-book-cover-url" class="block text-sm font-medium text-gray-700">URL Cover Baru</label>
                     <input type="url" id="edit-book-cover-url" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Kosongkan jika tidak ganti">
                 </div>
+                <div class="mb-4">
+                    <label for="edit-book-cover-file" class="block text-sm font-medium text-gray-700">atau Unggah Cover Baru</label>
+                    <input type="file" id="edit-book-cover-file" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100" accept="image/*">
+                </div>
                  <div class="mb-6">
                     <label for="edit-book-content" class="block text-sm font-medium text-gray-700">Isi Konten Buku</label>
                     <textarea id="edit-book-content" rows="10" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Tulis atau tempelkan isi buku di sini..."></textarea>
@@ -236,7 +244,7 @@
             <div class="p-6 border-b flex justify-between items-center">
                  <h2 id="read-book-title" class="text-2xl font-bold text-gray-800">Judul Buku</h2>
                  <button id="close-read-btn" class="text-gray-500 hover:text-gray-800">
-                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                  </button>
             </div>
             <div id="read-book-content" class="p-6 flex-grow overflow-y-auto whitespace-pre-wrap">
@@ -271,7 +279,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, doc, onSnapshot, addDoc, setDoc, deleteDoc, updateDoc, getDoc, writeBatch, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getFirestore, collection, doc, onSnapshot, addDoc, setDoc, deleteDoc, updateDoc, getDoc, writeBatch } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
         
         // --- KONFIGURASI & VARIABEL GLOBAL ---
         const MAIN_ADMIN = 'denian';
@@ -316,6 +324,7 @@
         const editBookTitleInput = document.getElementById('edit-book-title');
         const editBookAuthorInput = document.getElementById('edit-book-author');
         const editBookCoverUrlInput = document.getElementById('edit-book-cover-url');
+        const editBookCoverFileInput = document.getElementById('edit-book-cover-file');
         const editBookContentInput = document.getElementById('edit-book-content');
         // Read Modal
         const readBookModal = document.getElementById('read-book-modal');
@@ -346,31 +355,26 @@
         // --- INISIALISASI ---
         const initializeAppWithFirebase = async () => {
             try {
-                const appId = typeof __app_id !== 'undefined' ? __app_id : null;
-                const firebaseConfigStr = typeof __firebase_config !== 'undefined' ? __firebase_config : '{}';
+                // Konfigurasi Firebase dari variabel global
+                if (typeof __firebase_config === 'undefined' || __firebase_config === '{}') {
+                    throw new Error("Variabel konfigurasi Firebase (__firebase_config) tidak ditemukan atau kosong.");
+                }
+                const firebaseConfig = JSON.parse(__firebase_config);
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                const auth = getAuth(app);
                 
-                // PERBAIKAN: Memeriksa apakah __app_id ada. Ini penting untuk keamanan.
-                if (!appId) {
-                    throw new Error("Variabel __app_id tidak ditemukan. Pastikan aplikasi berjalan di lingkungan yang benar.");
-                }
-                if (!firebaseConfigStr || firebaseConfigStr === '{}') {
-                    throw new Error("Konfigurasi Firebase tidak ditemukan.");
-                }
-                const firebaseConfig = JSON.parse(firebaseConfigStr);
+                // Konfigurasi App ID dari variabel global
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
 
-                const firebaseApp = initializeApp(firebaseConfig);
-                db = getFirestore(firebaseApp);
-                // PERBAIKAN: Menambahkan log level debug untuk melihat info error Firebase di console
-                setLogLevel('Debug');
-                const auth = getAuth(firebaseApp);
-
-                const authToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-                if (authToken) {
-                    await signInWithCustomToken(auth, authToken);
+                // Autentikasi pengguna
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
                 } else {
                     await signInAnonymously(auth);
                 }
-                
+
+                // Melanjutkan inisialisasi aplikasi
                 await seedInitialData(appId);
                 setupRealtimeListeners(appId);
 
@@ -379,7 +383,11 @@
                 showPage('login-page');
             } catch (error) {
                 console.error("Gagal menginisialisasi Firebase:", error);
-                loadingOverlay.innerHTML = `<p class="text-red-500 font-bold">Error: ${error.message}. Coba muat ulang halaman.</p>`;
+                loadingOverlay.innerHTML = `<div class="text-center p-4 bg-red-100 rounded-lg">
+                    <h3 class="text-lg font-bold text-red-700">Terjadi Kesalahan Konfigurasi</h3>
+                    <p class="text-red-600 mt-2">Tidak dapat memuat aplikasi. Pastikan aplikasi ini dijalankan di lingkungan yang benar dengan konfigurasi Firebase yang valid.</p>
+                    <p class="text-sm text-gray-500 mt-4">Detail: ${error.message}</p>
+                </div>`;
             }
         };
         
@@ -439,7 +447,7 @@
             });
         };
 
-        const getAppId = () => typeof __app_id !== 'undefined' ? __app_id : 'elibrary-dev';
+        const getAppId = () => typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
 
         // --- FUNGSI BANTU & TAMPILAN ---
         const showNotification = (title, message, isError = false) => {
@@ -485,6 +493,15 @@
             backgroundContainer.className = `theme-${theme}`;
         };
         
+        const fileToDataUrl = (file) => {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+        };
+
         const renderBooks = () => {
             bookList.innerHTML = '';
             localBooks.sort((a,b) => a.title.localeCompare(b.title)).forEach(book => {
@@ -502,319 +519,362 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" /><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" /></svg>
                             </button>
                             <button data-id="${book.id}" class="delete-btn absolute top-3 right-3 bg-red-600 text-white rounded-full p-2 w-9 h-9 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity focus:outline-none hover:bg-red-700" title="Hapus Buku">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" /></svg>
                             </button>
                         `;
                     }
+
                     if (isBorrowedByCurrentUser) {
-                        userActionButtons = `<button data-id="${book.id}" class="return-btn bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-3 w-full rounded-lg">Kembalikan</button>`;
+                        userActionButtons = `<button data-id="${book.id}" class="return-btn w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 transition-colors">Kembalikan</button>`;
                     } else if (!isBorrowed) {
-                        userActionButtons = `<button data-id="${book.id}" class="borrow-btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 w-full rounded-lg">Pinjam</button>`;
-                    } else {
-                         userActionButtons = `<div class="text-center py-2 px-3 text-sm font-semibold text-gray-500 bg-gray-100 rounded-lg">Dipinjam</div>`;
+                        userActionButtons = `<button data-id="${book.id}" class="borrow-btn w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 transition-colors">Pinjam</button>`;
                     }
                 }
-                
-                const borrowedBadge = isBorrowed ? `<div class="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">${isBorrowedByCurrentUser ? 'Dipinjam Anda' : 'Dipinjam'}</div>` : '';
 
                 bookCard.innerHTML = `
-                    <div>
-                        <div class="relative">
-                            <img src="${book.cover}" alt="Cover ${book.title}" class="w-full h-80 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x600/cccccc/ffffff?text=No+Cover';">
+                    <div class="p-4 flex-grow">
+                        <div class="relative aspect-[2/3] mb-4">
+                            <img src="${book.cover || 'https://placehold.co/200x300/e2e8f0/334155?text=No+Cover'}" alt="${book.title}" class="w-full h-full object-cover rounded-md" onerror="this.onerror=null;this.src='https://placehold.co/200x300/e2e8f0/334155?text=Error';">
                             ${adminButtons}
-                            ${borrowedBadge}
                         </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-md truncate" title="${book.title}">${book.title}</h3>
-                            <p class="text-gray-600 text-sm">${book.author}</p>
-                        </div>
+                        <h3 class="font-bold text-md leading-tight truncate">${book.title}</h3>
+                        <p class="text-sm text-gray-600">${book.author}</p>
                     </div>
-                    <div class="p-2 mt-auto grid gap-2 grid-cols-2">
-                       <button data-id="${book.id}" class="read-btn bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-3 w-full col-span-1 rounded-lg">Baca</button>
-                       <div class="col-span-1">${userActionButtons}</div>
+                    <div class="p-4 pt-0">
+                         <button data-id="${book.id}" class="read-btn w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg mb-2 transition-colors">Baca</button>
+                        ${userActionButtons || ''}
+                         ${isBorrowed && !isBorrowedByCurrentUser ? `<div class="text-center text-sm text-red-500 font-semibold mt-2">Dipinjam oleh ${book.borrowedBy}</div>` : ''}
                     </div>
                 `;
                 bookList.appendChild(bookCard);
             });
         };
-
+        
         const renderApprovalList = () => {
-            approvalList.innerHTML = localPending.length === 0 
-                ? '<p class="text-gray-500">Tidak ada pendaftaran baru.</p>'
-                : localPending.map(req => `
-                    <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
-                        <p class="font-medium text-gray-700">${req.username}</p>
-                        <div>
-                            <button data-id="${req.id}" data-username="${req.username}" data-password="${req.password}" class="approve-btn bg-green-500 hover:bg-green-600 text-white text-sm font-bold py-1 px-3 rounded-md mr-2">Setuju</button>
-                            <button data-id="${req.id}" class="reject-btn bg-red-500 hover:bg-red-600 text-white text-sm font-bold py-1 px-3 rounded-md">Tolak</button>
-                        </div>
-                    </div>
-                `).join('');
+            approvalList.innerHTML = '';
+            if (localPending.length === 0) {
+                 approvalList.innerHTML = '<p class="text-gray-500">Tidak ada pendaftaran yang menunggu persetujuan.</p>';
+                 return;
+            }
+            localPending.forEach(user => {
+                 const item = document.createElement('div');
+                 item.className = 'flex justify-between items-center bg-gray-50 p-3 rounded-lg';
+                 item.innerHTML = `
+                     <span class="font-medium text-gray-700">${user.username}</span>
+                     <div>
+                         <button data-id="${user.id}" class="approve-btn bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded-md mr-2">Setujui</button>
+                         <button data-id="${user.id}" class="reject-btn bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded-md">Tolak</button>
+                     </div>
+                 `;
+                 approvalList.appendChild(item);
+            });
+        };
+        
+        const renderUserList = () => {
+            userList.innerHTML = '';
+            const users = Object.values(localUsers).sort((a,b) => a.id.localeCompare(b.id));
+
+            if (users.length === 0) {
+                 userList.innerHTML = '<p class="text-gray-500">Tidak ada pengguna terdaftar.</p>';
+                 return;
+            }
+
+            users.forEach(user => {
+                 const isMainAdmin = user.id === MAIN_ADMIN;
+                 const item = document.createElement('div');
+                 item.className = 'flex justify-between items-center bg-gray-50 p-3 rounded-lg';
+                 
+                 const roleBadge = user.role === 'admin' 
+                    ? `<span class="bg-indigo-100 text-indigo-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">Admin</span>`
+                    : `<span class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">User</span>`;
+
+                 item.innerHTML = `
+                     <div>
+                        <span class="font-medium text-gray-700">${user.id}</span>
+                        ${roleBadge}
+                     </div>
+                     <div>
+                        ${!isMainAdmin ? `
+                            <button data-id="${user.id}" data-role="${user.role}" class="toggle-role-btn bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded-md mr-2">
+                                ${user.role === 'admin' ? 'Jadikan User' : 'Jadikan Admin'}
+                            </button>
+                            <button data-id="${user.id}" class="delete-user-btn bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded-md">
+                                Hapus
+                            </button>
+                        ` : '<span class="text-sm font-semibold text-gray-500">Tidak dapat diubah</span>'}
+                     </div>
+                 `;
+                 userList.appendChild(item);
+            });
         };
 
-        const renderUserList = () => {
-            userList.innerHTML = Object.values(localUsers).length === 0
-                ? '<p class="text-gray-500">Tidak ada pengguna terdaftar.</p>'
-                : Object.values(localUsers).sort((a,b) => a.id.localeCompare(b.id)).map(user => `
-                    <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
-                        <div>
-                           <p class="font-medium text-gray-800">${user.id}</p>
-                           <p class="text-sm ${user.role === 'admin' ? 'text-indigo-600 font-semibold' : 'text-gray-500'}">Role: ${user.role}</p>
-                        </div>
-                        <div>
-                            ${user.id !== MAIN_ADMIN ? `
-                                <button data-id="${user.id}" data-current-role="${user.role}" class="toggle-role-btn ${user.role === 'admin' ? 'bg-yellow-500 hover:bg-yellow-600' : 'bg-indigo-500 hover:bg-indigo-600'} text-white text-sm font-bold py-1 px-3 rounded-md mr-2">
-                                    ${user.role === 'admin' ? 'Jadikan User' : 'Jadikan Admin'}
-                                </button>
-                                <button data-id="${user.id}" class="delete-user-btn bg-red-500 hover:bg-red-600 text-white text-sm font-bold py-1 px-3 rounded-md">Hapus</button>
-                            ` : '<span class="text-sm font-bold text-gray-500">ADMIN UTAMA</span>'}
-                        </div>
-                    </div>
-                `).join('');
-        };
 
         // --- LOGIKA APLIKASI ---
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeAppWithFirebase();
 
-            // Navigasi
-            showRegisterLink.addEventListener('click', (e) => { e.preventDefault(); showPage('register-page'); });
-            showLoginLink.addEventListener('click', (e) => { e.preventDefault(); showPage('login-page'); });
+        const handleLogin = (e) => {
+            e.preventDefault();
+            loginErrorMessage.classList.add('hidden');
+            loginSuccessMessage.classList.add('hidden');
+            toggleButtonLoading(loginBtn, true);
 
-            // Form Handlers
-            loginForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                toggleButtonLoading(loginBtn, true);
-                const username = document.getElementById('username').value.trim();
-                const password = document.getElementById('password').value;
-                loginErrorMessage.classList.add('hidden');
-                loginSuccessMessage.classList.add('hidden');
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
 
-                const user = localUsers[username];
-                if (user && user.password === password) {
-                    currentUser = { username: username, role: user.role };
-                    welcomeMessage.textContent = `Selamat datang, ${currentUser.username}!`;
-                    if(currentUser.role === 'admin') {
-                        adminPanel.classList.remove('hidden');
-                        renderApprovalList();
-                        renderUserList();
-                    } else {
-                        adminPanel.classList.add('hidden');
-                    }
-                    renderBooks();
-                    showPage('library-page');
-                } else {
-                    loginErrorMessage.textContent = 'Username atau password salah.';
-                    loginErrorMessage.classList.remove('hidden');
-                }
+            if (!username || !password) {
+                loginErrorMessage.textContent = "Username dan password tidak boleh kosong.";
+                loginErrorMessage.classList.remove('hidden');
                 toggleButtonLoading(loginBtn, false);
-            });
+                return;
+            }
 
-            registerForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                toggleButtonLoading(registerBtn, true);
-                try {
-                    const username = document.getElementById('reg-username').value.trim();
-                    const password = document.getElementById('reg-password').value;
-
-                    if (localUsers[username] || localPending.find(p => p.username === username)) {
-                        showNotification('Gagal', 'Username sudah terdaftar atau sedang menunggu persetujuan.', true);
-                        return;
-                    }
-
-                    await addDoc(collection(db, `artifacts/${getAppId()}/public/data/pendingRegistrations`), { username, password });
-                    showNotification('Berhasil', 'Pendaftaran Anda telah dikirim. Harap tunggu persetujuan dari admin.');
-                    registerForm.reset();
-                    showPage('login-page');
-                } catch (error) {
-                    console.error("Error saat registrasi:", error);
-                    showNotification('Gagal', 'Terjadi kesalahan saat mendaftar. Coba lagi.', true);
-                } finally {
-                    toggleButtonLoading(registerBtn, false);
+            const user = localUsers[username];
+            if (user && user.password === password) {
+                currentUser = { username, role: user.role };
+                welcomeMessage.textContent = `Selamat datang, ${currentUser.username}! (${currentUser.role})`;
+                adminPanel.classList.toggle('hidden', currentUser.role !== 'admin');
+                
+                renderBooks();
+                if (currentUser.role === 'admin') {
+                    renderApprovalList();
+                    renderUserList();
                 }
-            });
+
+                showPage('library-page');
+            } else {
+                loginErrorMessage.textContent = "Username atau password salah.";
+                loginErrorMessage.classList.remove('hidden');
+            }
+            toggleButtonLoading(loginBtn, false);
+        };
+
+        const handleRegister = async (e) => {
+            e.preventDefault();
+            toggleButtonLoading(registerBtn, true);
+
+            const username = document.getElementById('reg-username').value.trim();
+            const password = document.getElementById('reg-password').value;
+
+            if (localUsers[username] || localPending.some(p => p.username === username)) {
+                showNotification("Pendaftaran Gagal", "Username sudah ada atau sedang menunggu persetujuan.", true);
+                toggleButtonLoading(registerBtn, false);
+                return;
+            }
             
-            logoutBtn.addEventListener('click', () => {
-                currentUser = null;
-                showPage('login-page');
-                loginForm.reset();
-                loginSuccessMessage.classList.add('hidden');
-                loginErrorMessage.classList.add('hidden');
-            });
-
-            addBookForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                toggleButtonLoading(addBookBtn, true);
-                try {
-                    const title = document.getElementById('new-book-title').value;
-                    const author = document.getElementById('new-book-author').value;
-                    let cover = document.getElementById('new-book-cover-url').value;
-                    
-                    // PERBAIKAN: Logika disederhanakan. Hanya pakai URL.
-                    if (!cover) {
-                        cover = `https://placehold.co/400x600/cccccc/ffffff?text=${title.replace(/\s/g, '+')}`;
-                    }
-
-                    const newBook = { title, author, cover, borrowedBy: null, content: "" };
-                    await addDoc(collection(db, `artifacts/${getAppId()}/public/data/books`), newBook);
-                    showNotification('Berhasil', 'Buku baru berhasil ditambahkan.');
-                    addBookForm.reset();
-                } catch (error) {
-                    console.error("Error menambahkan buku:", error);
-                    showNotification('Gagal', 'Gagal menambahkan buku baru.', true);
-                } finally {
-                    toggleButtonLoading(addBookBtn, false);
-                }
-            });
-
-            // Event Delegation untuk tombol dinamis
-            document.body.addEventListener('click', async (e) => {
+            try {
                 const appId = getAppId();
-                const target = e.target.closest('button');
-                if (!target) return;
+                await addDoc(collection(db, `artifacts/${appId}/public/data/pendingRegistrations`), { username, password });
+                showNotification("Pendaftaran Berhasil", "Akun Anda telah didaftarkan dan menunggu persetujuan dari admin.");
+                registerForm.reset();
+                showPage('login-page');
+            } catch (error) {
+                console.error("Error pendaftaran: ", error);
+                showNotification("Pendaftaran Gagal", "Terjadi kesalahan saat mendaftar. Silakan coba lagi.", true);
+            } finally {
+                toggleButtonLoading(registerBtn, false);
+            }
+        };
 
-                const id = target.dataset.id;
-                
-                // Aksi Buku
-                if (target.classList.contains('borrow-btn') || target.classList.contains('return-btn')) {
-                    toggleButtonLoading(target, true);
-                    try {
-                        const newBorrowedBy = target.classList.contains('borrow-btn') ? currentUser.username : null;
-                        await updateDoc(doc(db, `artifacts/${appId}/public/data/books`, id), { borrowedBy: newBorrowedBy });
-                    } catch(error) {
-                        console.error("Error updating book status:", error);
-                        showNotification('Gagal', 'Gagal memperbarui status buku.', true);
-                    } finally {
-                        // Tidak perlu toggle loading off karena UI akan di-render ulang oleh onSnapshot
-                    }
-                }
-                
-                if (target.classList.contains('delete-btn')) {
-                    const confirmed = await showConfirmation('Hapus Buku', 'Anda yakin ingin menghapus buku ini? Tindakan ini tidak dapat diurungkan.');
-                    if (confirmed) {
-                        try {
-                            await deleteDoc(doc(db, `artifacts/${appId}/public/data/books`, id));
-                            showNotification('Berhasil', 'Buku telah dihapus.');
-                        } catch (error) {
-                            console.error("Error deleting book:", error);
-                            showNotification('Gagal', 'Gagal menghapus buku.', true);
-                        }
-                    }
-                }
-                
-                if (target.classList.contains('edit-btn')) {
-                    const book = localBooks.find(b => b.id === id);
-                    if (book) {
-                        editBookIdInput.value = book.id;
-                        editBookTitleInput.value = book.title;
-                        editBookAuthorInput.value = book.author;
-                        editBookContentInput.value = book.content || '';
-                        editBookCoverUrlInput.value = '';
-                        editBookCoverFileInput.value = '';
-                        editBookModal.classList.remove('hidden');
-                    }
-                }
-                
-                if (target.classList.contains('read-btn')) {
-                    const book = localBooks.find(b => b.id === id);
-                     if (book) {
-                        readBookTitle.textContent = book.title;
-                        readBookContent.textContent = book.content || 'Konten untuk buku ini belum tersedia.';
-                        readBookModal.classList.remove('hidden');
-                    }
-                }
-                
-                // Aksi Admin: Persetujuan
-                if (target.classList.contains('approve-btn') || target.classList.contains('reject-btn')) {
-                    toggleButtonLoading(target, true);
-                    try {
-                        if (target.classList.contains('approve-btn')) {
-                            const { username, password } = target.dataset;
-                            await setDoc(doc(db, `artifacts/${appId}/public/data/users`, username), { password, role: 'user' });
-                            showNotification('Berhasil', `Pengguna ${username} telah disetujui.`);
-                        } else {
-                            showNotification('Info', 'Pendaftaran telah ditolak.');
-                        }
-                        await deleteDoc(doc(db, `artifacts/${appId}/public/data/pendingRegistrations`, id));
-                    } catch (error) {
-                        console.error("Error processing registration:", error);
-                        showNotification('Gagal', 'Gagal memproses pendaftaran.', true);
-                    }
-                }
-                
-                // Aksi Admin: Manajemen Pengguna
-                if (target.classList.contains('toggle-role-btn')) {
-                    const newRole = target.dataset.currentRole === 'admin' ? 'user' : 'admin';
-                    try {
-                        await updateDoc(doc(db, `artifacts/${appId}/public/data/users`, id), { role: newRole });
-                    } catch(error) { showNotification('Gagal', 'Gagal mengubah role pengguna.', true); }
-                }
-                
-                if (target.classList.contains('delete-user-btn')) {
-                    const confirmed = await showConfirmation('Hapus Pengguna', `Anda yakin ingin menghapus pengguna ${id}?`);
-                    if (confirmed) {
-                         try {
-                            await deleteDoc(doc(db, `artifacts/${appId}/public/data/users`, id));
-                            showNotification('Berhasil', `Pengguna ${id} telah dihapus.`);
-                        } catch(error) { showNotification('Gagal', 'Gagal menghapus pengguna.', true); }
-                    }
-                }
-            });
+        const handleLogout = () => {
+            currentUser = null;
+            loginForm.reset();
+            showPage('login-page');
+        };
 
-            // Modal Handlers
-            cancelEditBtn.addEventListener('click', () => editBookModal.classList.add('hidden'));
-            closeReadBtn.addEventListener('click', () => readBookModal.classList.add('hidden'));
-            notificationCloseBtn.addEventListener('click', () => notificationModal.classList.add('hidden'));
-            confirmOkBtn.addEventListener('click', () => {
-                confirmModal.classList.add('hidden');
-                if (resolveConfirmation) resolveConfirmation(true);
-            });
-            confirmCancelBtn.addEventListener('click', () => {
-                confirmModal.classList.add('hidden');
-                if (resolveConfirmation) resolveConfirmation(false);
-            });
+        const handleAddBook = async (e) => {
+            e.preventDefault();
+            toggleButtonLoading(addBookBtn, true);
+            
+            const title = document.getElementById('new-book-title').value;
+            const author = document.getElementById('new-book-author').value;
+            let cover = document.getElementById('new-book-cover-url').value;
+            const coverFile = document.getElementById('new-book-cover-file').files[0];
 
-            editBookForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                toggleButtonLoading(saveEditBtn, true);
+            if (coverFile) {
                 try {
-                    const id = editBookIdInput.value;
-                    const title = editBookTitleInput.value;
-                    const author = editBookAuthorInput.value;
-                    const content = editBookContentInput.value;
-                    let coverUrl = editBookCoverUrlInput.value;
-                    
-                    const updates = { title, author, content };
-
-                    // PERBAIKAN: Logika disederhanakan. Hanya pakai URL.
-                    if (coverUrl) {
-                        updates.cover = coverUrl;
-                    }
-
-                    await updateDoc(doc(db, `artifacts/${getAppId()}/public/data/books`, id), updates);
-                    editBookModal.classList.add('hidden');
-                    showNotification('Berhasil', 'Perubahan buku telah disimpan.');
-                } catch(error) {
-                    console.error("Error saving book:", error);
-                    showNotification('Gagal', 'Gagal menyimpan perubahan buku.', true);
-                } finally {
-                    toggleButtonLoading(saveEditBtn, false);
+                    cover = await fileToDataUrl(coverFile);
+                } catch (error) {
+                    console.error("Gagal membaca file gambar:", error);
+                    showNotification("Gagal", "Tidak dapat memproses file gambar.", true);
+                    toggleButtonLoading(addBookBtn, false);
+                    return;
                 }
-            });
+            }
+            
+            const newBook = { title, author, cover, borrowedBy: null, content: "" };
+            
+            try {
+                const appId = getAppId();
+                await addDoc(collection(db, `artifacts/${appId}/public/data/books`), newBook);
+                showNotification("Berhasil", "Buku baru berhasil ditambahkan.");
+                addBookForm.reset();
+            } catch (error) {
+                console.error("Error menambahkan buku: ", error);
+                showNotification("Gagal", "Gagal menambahkan buku.", true);
+            } finally {
+                toggleButtonLoading(addBookBtn, false);
+            }
+        };
 
-            themeSelector.addEventListener('change', async (e) => {
-                if (e.target.name === 'theme') {
-                    try {
-                        const newTheme = e.target.value;
-                        await setDoc(doc(db, `artifacts/${getAppId()}/public/data/settings`, 'theme'), { name: newTheme });
-                    } catch(error) {
-                        console.error("Error setting theme:", error);
-                        showNotification('Gagal', 'Gagal mengganti tema.', true);
-                    }
+        const handleApproval = async (id, isApproved) => {
+            const pendingUser = localPending.find(p => p.id === id);
+            if (!pendingUser) return;
+            
+            const appId = getAppId();
+            const pendingDocRef = doc(db, `artifacts/${appId}/public/data/pendingRegistrations`, id);
+            
+            try {
+                if (isApproved) {
+                    const userDocRef = doc(db, `artifacts/${appId}/public/data/users`, pendingUser.username);
+                    await setDoc(userDocRef, { password: pendingUser.password, role: 'user' });
                 }
-            });
+                await deleteDoc(pendingDocRef);
+                showNotification("Berhasil", `Pendaftaran untuk ${pendingUser.username} telah di${isApproved ? 'setujui' : 'tolak'}.`);
+            } catch (error) {
+                console.error("Error memproses persetujuan: ", error);
+                showNotification("Gagal", "Terjadi kesalahan saat memproses permintaan.", true);
+            }
+        };
+        
+        const handleBookAction = async (e) => {
+            if (!currentUser) {
+                showNotification("Aksi Ditolak", "Anda harus login untuk melakukan aksi ini.", true);
+                return;
+            }
+            const target = e.target.closest('button');
+            if (!target) return;
+
+            const bookId = target.dataset.id;
+            const appId = getAppId();
+            const bookDocRef = doc(db, `artifacts/${appId}/public/data/books`, bookId);
+
+            if (target.classList.contains('borrow-btn')) {
+                await updateDoc(bookDocRef, { borrowedBy: currentUser.username });
+            } else if (target.classList.contains('return-btn')) {
+                await updateDoc(bookDocRef, { borrowedBy: null });
+            } else if (target.classList.contains('delete-btn')) {
+                const confirmed = await showConfirmation("Hapus Buku", `Apakah Anda yakin ingin menghapus buku ini?`);
+                if(confirmed) await deleteDoc(bookDocRef);
+            } else if (target.classList.contains('edit-btn')) {
+                const book = localBooks.find(b => b.id === bookId);
+                editBookIdInput.value = book.id;
+                editBookTitleInput.value = book.title;
+                editBookAuthorInput.value = book.author;
+                editBookContentInput.value = book.content || '';
+                editBookCoverUrlInput.value = ''; // Reset
+                editBookCoverFileInput.value = ''; // Reset
+                editBookModal.classList.remove('hidden');
+            } else if (target.classList.contains('read-btn')) {
+                const book = localBooks.find(b => b.id === bookId);
+                readBookTitle.textContent = book.title;
+                readBookContent.textContent = book.content || 'Konten untuk buku ini belum tersedia.';
+                readBookModal.classList.remove('hidden');
+            }
+        };
+        
+        const handleSaveEdit = async (e) => {
+            e.preventDefault();
+            toggleButtonLoading(saveEditBtn, true);
+
+            const bookId = editBookIdInput.value;
+            const title = editBookTitleInput.value;
+            const author = editBookAuthorInput.value;
+            let coverUrl = editBookCoverUrlInput.value;
+            const coverFile = editBookCoverFileInput.files[0];
+            const content = editBookContentInput.value;
+
+            const updates = { title, author, content };
+            
+            if (coverFile) {
+                try {
+                    updates.cover = await fileToDataUrl(coverFile);
+                } catch (error) {
+                     console.error("Gagal membaca file gambar:", error);
+                     showNotification("Gagal", "Tidak dapat memproses file gambar.", true);
+                     toggleButtonLoading(saveEditBtn, false);
+                     return;
+                }
+            } else if(coverUrl) {
+                updates.cover = coverUrl;
+            }
+
+            try {
+                const appId = getAppId();
+                const bookDocRef = doc(db, `artifacts/${appId}/public/data/books`, bookId);
+                await updateDoc(bookDocRef, updates);
+                editBookModal.classList.add('hidden');
+                showNotification("Berhasil", "Perubahan buku telah disimpan.");
+            } catch (error) {
+                console.error("Gagal menyimpan perubahan: ", error);
+                showNotification("Gagal", "Gagal menyimpan perubahan.", true);
+            } finally {
+                toggleButtonLoading(saveEditBtn, false);
+            }
+        };
+
+        const handleUserManagement = async (e) => {
+            const target = e.target.closest('button');
+            if (!target) return;
+            const userId = target.dataset.id;
+            const appId = getAppId();
+            const userDocRef = doc(db, `artifacts/${appId}/public/data/users`, userId);
+
+            if (target.classList.contains('toggle-role-btn')) {
+                const currentRole = target.dataset.role;
+                const newRole = currentRole === 'admin' ? 'user' : 'admin';
+                const confirmed = await showConfirmation("Ubah Peran", `Ubah peran ${userId} menjadi ${newRole}?`);
+                if(confirmed) await updateDoc(userDocRef, { role: newRole });
+
+            } else if (target.classList.contains('delete-user-btn')) {
+                const confirmed = await showConfirmation("Hapus Pengguna", `Hapus pengguna ${userId}? Ini akan menghapus akun mereka secara permanen.`);
+                if(confirmed) await deleteDoc(userDocRef);
+            }
+        };
+
+
+        // --- EVENT LISTENERS ---
+        document.addEventListener('DOMContentLoaded', initializeAppWithFirebase);
+        loginForm.addEventListener('submit', handleLogin);
+        registerForm.addEventListener('submit', handleRegister);
+        logoutBtn.addEventListener('click', handleLogout);
+        addBookForm.addEventListener('submit', handleAddBook);
+        showRegisterLink.addEventListener('click', (e) => { e.preventDefault(); showPage('register-page'); });
+        showLoginLink.addEventListener('click', (e) => { e.preventDefault(); showPage('login-page'); });
+        bookList.addEventListener('click', handleBookAction);
+        
+        // Listeners Panel Admin
+        approvalList.addEventListener('click', (e) => {
+            const button = e.target.closest('button');
+            if (button) {
+                const id = button.dataset.id;
+                if (button.classList.contains('approve-btn')) handleApproval(id, true);
+                if (button.classList.contains('reject-btn')) handleApproval(id, false);
+            }
+        });
+        
+        userList.addEventListener('click', handleUserManagement);
+
+        themeSelector.addEventListener('change', async (e) => {
+            const theme = e.target.value;
+            const appId = getAppId();
+            const themeDocRef = doc(db, `artifacts/${appId}/public/data/settings`, 'theme');
+            await setDoc(themeDocRef, { name: theme });
         });
 
+        // Listeners Modal
+        editBookForm.addEventListener('submit', handleSaveEdit);
+        cancelEditBtn.addEventListener('click', () => editBookModal.classList.add('hidden'));
+        closeReadBtn.addEventListener('click', () => readBookModal.classList.add('hidden'));
+        notificationCloseBtn.addEventListener('click', () => notificationModal.classList.add('hidden'));
+        confirmCancelBtn.addEventListener('click', () => {
+            confirmModal.classList.add('hidden');
+            if (resolveConfirmation) resolveConfirmation(false);
+        });
+        confirmOkBtn.addEventListener('click', () => {
+            confirmModal.classList.add('hidden');
+            if (resolveConfirmation) resolveConfirmation(true);
+        });
+        
     </script>
 </body>
 </html>
+
